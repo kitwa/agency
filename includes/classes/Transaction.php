@@ -194,6 +194,14 @@ $totalRestPlace
       }
     }
 
+    if ($_COOKIE["CrijC"] == "0640490824" && $destination == "kolwezi") {
+      if ($etat == 0) {
+        $retirerRow = "<td> <a class='secondary-content modal-trigger' data-target='$model2' ><span class='waves-effect waves-light btn'>Retirer</span></a></td>";
+      } else {
+        $retirerRow = "<td><a class='waves-effect waves-light btn-small'>Déjà Retiré</a></td>";
+      }
+    }
+
     return "
         <tr class='$class'>
         <td>$transactionId</td>

@@ -117,6 +117,7 @@ $transaction = new Transaction($con, $transactions, null);
             <option value="pweto">Pweto</option>
             <option value="lukozolo">Lukozolo</option>
             <option value="kilwa">Kilwa</option>
+            <option value="kolwezi">Kolwezi</option>
           </select>
         </div>
         <div class="input-field col s6">
@@ -127,6 +128,7 @@ $transaction = new Transaction($con, $transactions, null);
             <option value="pweto">Pweto</option>
             <option value="lukozolo">Lukozolo</option>
             <option value="kilwa">Kilwa</option>
+            <option value="kolwezi">Kolwezi</option>
           </select>
         </div>
         <div class="col s6">

@@ -25,8 +25,8 @@ $DebutCompteData = new DebutCompteData(
 $_POST["lubumbashi"], 
 $_POST["pweto"], 
 $_POST["kilwa"],
-$_POST["lukozolo"]
-
+$_POST["lukozolo"],
+$_POST["kolwezi"], 
 );
 // process image data (upload)
 

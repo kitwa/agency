@@ -69,6 +69,7 @@ class UploadHandler
       <option value='pweto'>Pweto</option>
       <option value='lukozolo'>Lukozolo</option>
       <option value='kilwa'>Kilwa</option>
+      <option value='kolwezi'>Kolwezi</option>
     </select>
     </div>";
   }
@@ -112,6 +113,9 @@ class UploadHandler
         break;
       case '0640490823':
         $provenance = 'lukozolo';
+        break;
+      case '0640490824':
+        $provenance = 'kolwezi';
         break;
       default:
         $provenance = 'Please login as an agent!';
