@@ -64,6 +64,20 @@ if (!isset($_COOKIE["CrijC"])) {
       document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
     }
 
+
+    $(document).ready(function(){
+      var x = getCookie('CrijC');
+        if (x == "0640490823" || destination == "lukozolo") {
+          $("#taux").attr("value", "2.5");
+
+        }else if (x == "0640490824" || destination == "kolwezi") {
+          $("#taux").attr("value", "1.5");
+        } else {
+          $("#taux").attr("value", "2");
+        }
+
+    });
+
     // cookies end here
 
     $(function() {

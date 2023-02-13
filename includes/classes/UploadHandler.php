@@ -70,8 +70,8 @@ class UploadHandler
   private function taux()
   {
     return "<div class='input-field ' >
-          <input id='taux' type='number' data-length='25' value='2.5' name='taux' required>
-          <label for='taux'>Taux</label>
+          <input id='taux' type='text' data-length='25' value='2.5' name='taux' required>
+          <label for='taux'>Pourcentage</label>
         </div>";
   }
 
