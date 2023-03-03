@@ -14,7 +14,6 @@ class UploadHandler
   {
 
     $destination = $this->destination();
-    $taux = $this->taux();
 
     $decription = $this->createDescription();
     $uploadButton = $this->createUploadButton();
@@ -31,7 +30,6 @@ class UploadHandler
 
         <p>Remplir tous les champs </p>
                 $destination
-                $taux
                 $montantEnvoyer
                 $gain
                 $montantTotal
@@ -51,6 +49,15 @@ class UploadHandler
     return "<input name='code' id='code' type='hidden' value='$code'></input>";
   }
 
+  private function createTitle()
+  {
+    return "
+        <div class='input-field ' >
+          <input id='title' type='text' data-length='25' name='title' required>
+          <label for='title'>Titre *</label>
+        </div>
+    ";
+  }
   
   private function destination()
   {
@@ -65,14 +72,6 @@ class UploadHandler
       <option value='kolwezi'>Kolwezi</option>
     </select>
     </div>";
-  }
-
-  private function taux()
-  {
-    return "<div class='input-field ' >
-          <input id='taux' type='text' data-length='25' value='2.5' name='taux' required>
-          <label for='taux'>Pourcentage</label>
-        </div>";
   }
 
   private function montantEnvoyer()
