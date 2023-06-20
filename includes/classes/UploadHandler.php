@@ -69,7 +69,7 @@ class UploadHandler
       <option value='pweto'>Pweto</option>
       <option value='lukozolo'>Lukozolo</option>
       <option value='kilwa'>Kilwa</option>
-      <option value='kolwezi'>Kolwezi</option>
+      <option value='kolwezi'>Kolwezi Cite</option>
       <option value='kolwezilwilu'>Kolwezi Lwilu</option>
     </select>
     </div>";

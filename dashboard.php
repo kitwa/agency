@@ -114,7 +114,7 @@ $transaction = new Transaction($con, $transactions, null);
               echo 'LUKOZOLO';
               break;
             case 'kolwezi':
-              echo 'KOLWEZI';
+              echo 'KOLWEZI CITE';
               break;
             case 'kolwezilwilu':
               echo 'KOLWEZI LWILU';

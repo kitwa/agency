@@ -127,7 +127,7 @@ class DebutCompteHandler
     {
         return "<div class='input-field ' >
           <input id='kolwezi' type='text' data-length='25' value='$this->kolwezi' name='kolwezi' required>
-          <label for='kolwezi'>Kolwezi</label>
+          <label for='kolwezi'>Kolwezi Cite</label>
         </div>";
     }
 
