@@ -196,6 +196,9 @@ class ApprovisionnerHandler
       case '0640490824':
         $destinationCompte = 'kolwezi';
         break;
+      case '0640490825':
+        $destinationCompte = 'kolwezilwilu';
+        break;
       default:
         $destinationCompte = 'Administrateur';
         break;
