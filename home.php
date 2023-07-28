@@ -118,6 +118,7 @@ $transaction = new Transaction($con, $transactions, null);
             <option value="lukozolo">Lukozolo</option>
             <option value="kilwa">Kilwa</option>
             <option value="kolwezi">Kolwezi Cite</option>
+            <option value="Kolwezilwilu">Kolwezi Kwilu</option>
           </select>
         </div>
         <div class="input-field col s6">
