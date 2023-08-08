@@ -27,7 +27,6 @@ $_POST["pweto"],
 $_POST["kilwa"],
 $_POST["lukozolo"],
 $_POST["kolwezi"], 
-$_POST["kolwezilwilu"]
 );
 // process image data (upload)
 

@@ -12,7 +12,7 @@ class FinJourneeHandler
 
   public function postData()
   {
-    $arrayCity = array("lubumbashi", "pweto", "kilwa", "lukozolo", "kolwezi", "kolwezilwilu");
+    $arrayCity = array("lubumbashi", "pweto", "kilwa", "lukozolo", "kolwezi");
 
     $query = $this->con->prepare("SELECT date FROM capital order by date DESC LIMIT 1");
     $query->execute();

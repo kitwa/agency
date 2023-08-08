@@ -48,12 +48,9 @@ if ($_SERVER['HTTP_HOST'] == "localhost" || $_SERVER['HTTP_HOST'] == "localhost:
 
 // UPDATE `users` SET `password`='9c1a3a68f67af35c0f4ed34c8f87b241' WHERE `id`='1';
 
-// INSERT INTO `users` VALUES (6,'kolwezilwilu','Agent','kolwezilwilu','0640490825','712e2a5128e12bcc9840efe986887134',now(),NULL,NULL,1,'0')
-
 
 /******  Instruction to reset  *****/
 
 // truncate desapprovisionning;
 // truncate approvisionning;
 // truncate transaction;
-// truncate capital;

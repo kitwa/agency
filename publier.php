@@ -79,8 +79,6 @@ if (!isset($_COOKIE["CrijC"])) {
           gain = document.querySelector('#gain').value = montantEnvoyer * 0.025;
         }else if (x == "0640490824" || destination == "kolwezi") {
           gain = document.querySelector('#gain').value = montantEnvoyer * 0.015;
-        }else if (x == "0640490825" || destination == "kolwezilwilu") {
-          gain = document.querySelector('#gain').value = montantEnvoyer * 0.015;
         } 
         else {
           gain = document.querySelector('#gain').value = montantEnvoyer * 0.02;
@@ -99,9 +97,7 @@ if (!isset($_COOKIE["CrijC"])) {
           gain = document.querySelector('#gain').value = montantEnvoyer * 0.025;
         }else if (this.value == "kolwezi") {
           gain = document.querySelector('#gain').value = montantEnvoyer * 0.015;
-        }else if (this.value == "kolwezilwilu") {
-          gain = document.querySelector('#gain').value = montantEnvoyer * 0.015;
-        }   
+        }  
         else {
           gain = document.querySelector('#gain').value = montantEnvoyer * 0.02;
         }
