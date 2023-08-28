@@ -10,9 +10,11 @@ if (!isset($_COOKIE["CrijC"])) {
 $ApprovisionnerHandler = new ApprovisionnerHandler($con);
 $userId = $userLoggedInObj->getUserId();
 $city = $userLoggedInObj->getCity();
-
-$desapprovisionnings = $ApprovisionnerHandler->getDesapprovisionnementAll();
-
+if ($userId == 999) {
+  $desapprovisionnings = $ApprovisionnerHandler->getDesapprovisionnementAll();
+}else{
+  $desapprovisionnings = $ApprovisionnerHandler->getDesapprovisionnementPerCity($city);
+}
 $desapprovisionning = new Desapprovisionning($con, $desapprovisionnings, null);
 ?>
 <div class="container mb-70">

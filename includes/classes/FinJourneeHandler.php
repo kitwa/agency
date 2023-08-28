@@ -170,6 +170,19 @@ class FinJourneeHandler
     return $this->generateItemsFromTransactions($result);
   }
 
+  public function getDataPerCity($city)
+  {
+    $query = $this->con->prepare("SELECT * FROM capital WHERE uploadedBy LIKE '%$city%' ORDER BY id DESC LIMIT 100");
+    $query->execute();
+
+    $result = array();
+    while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+      array_push($result, $row);
+    }
+
+    return $this->generateItemsFromTransactions($result);
+  }
+
   public function generateItemsFromTransactions($transactions)
   {
     $elementsHtml = "";

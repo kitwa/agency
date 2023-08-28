@@ -9,7 +9,7 @@ define('SITE_ROOT', __DIR__);
 if ($_SERVER['HTTP_HOST'] == "localhost" || $_SERVER['HTTP_HOST'] == "localhost:8080") {
     try {
 
-        $con = new PDO("mysql:dbname=agency;host=localhost", "root", "LOv1p3r");
+        $con = new PDO("mysql:dbname=agency;host=localhost", "root", "");
         $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
     } catch (PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
@@ -17,8 +17,9 @@ if ($_SERVER['HTTP_HOST'] == "localhost" || $_SERVER['HTTP_HOST'] == "localhost:
 } else {
     try {
 
-        $con = new PDO("mysql:dbname=crijagency;host=localhost", "agency", "Agency@1502");
-        // $con = new PDO("mysql:dbname=agencytest;host=localhost", "agencytest", "Test@2021");
+        // $con = new PDO("mysql:dbname=kibohism_crijagency;host=localhost", "kibohism_agency", "Agency@1502");
+        // $con = new PDO("mysql:dbname=crijagency;host=localhost", "agency", "Agency@1502");
+        $con = new PDO("mysql:dbname=kibohism_crijagencytest;host=localhost", "kibohism_agency", "Agency@1502");
 
         $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
     } catch (PDOException $e) {
@@ -34,7 +35,7 @@ if ($_SERVER['HTTP_HOST'] == "localhost" || $_SERVER['HTTP_HOST'] == "localhost:
 
 
 
-// CREATE USER 'agency'@'localhost' IDENTIFIED BY 'Agency@1502';
+// CREATE USER 'kibohism_crijagency'@'localhost' IDENTIFIED BY 'Agency@1502';
 
 // GRANT ALL PRIVILEGES ON * . * TO 'agency'@'localhost';
 

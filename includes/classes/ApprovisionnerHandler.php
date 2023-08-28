@@ -21,7 +21,21 @@ class ApprovisionnerHandler
     }
 
     return $approvisionnings;
-}
+  }
+
+  public function getApprovisionnementPerCity($city){
+    $query = $this->con->prepare("SELECT * FROM approvisionning WHERE deleted = 0 AND (provenance LIKE '%$city%' || destination LIKE '%$city%') ORDER BY id DESC") ;
+    $query->execute();
+
+    $approvisionnings = array();
+    while($row = $query->fetch(PDO::FETCH_ASSOC)){
+        $transaction = new Transaction($this->con, $row, null);
+        array_push($approvisionnings, $transaction);
+    }
+
+    return $approvisionnings;
+  }
+
 
   public function getDesapprovisionnementAll(){
     $query = $this->con->prepare("SELECT * FROM desapprovisionning WHERE deleted = 0 ORDER BY id DESC") ;
@@ -34,6 +48,19 @@ class ApprovisionnerHandler
     }
 
     return $desapprovisionnings;
+}
+
+public function getDesapprovisionnementPerCity($city){
+  $query = $this->con->prepare("SELECT * FROM desapprovisionning WHERE deleted = 0 AND (provenance LIKE '%$city%' || destination LIKE '%$city%') ORDER BY id DESC") ;
+  $query->execute();
+
+  $desapprovisionnings = array();
+  while($row = $query->fetch(PDO::FETCH_ASSOC)){
+      $transaction = new Transaction($this->con, $row, null);
+      array_push($desapprovisionnings, $transaction);
+  }
+
+  return $desapprovisionnings;
 }
 
 

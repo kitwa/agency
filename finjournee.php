@@ -1,8 +1,5 @@
 <?php
 require_once("includes/header.php");
-require_once("includes/config.php");
-require_once("includes/classes/User.php");
-$userLoggedInObj = new User($con, null);
 ?>
 
 <?php require_once("includes/classes/FinJourneeHandler.php"); ?>
@@ -40,7 +37,14 @@ $stats = $handler->postData();
       <div class="row">
 
         <?php
-        echo $handler->getData();
+
+          $userId = $userLoggedInObj->getUserId();
+          $city = $userLoggedInObj->getCity();
+          if ($userId == 999) {
+            echo $handler->getData();
+          }else{
+            echo $handler->getDataPerCity($city);
+          }
         ?>
 
       </div>

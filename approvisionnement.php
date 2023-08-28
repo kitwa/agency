@@ -11,7 +11,12 @@ $ApprovisionnerHandler = new ApprovisionnerHandler($con);
 $userId = $userLoggedInObj->getUserId();
 $city = $userLoggedInObj->getCity();
 
-$approvisionnings = $ApprovisionnerHandler->getApprovisionnementAll();
+if($userId == 999) {
+  $approvisionnings = $ApprovisionnerHandler->getApprovisionnementAll();
+}else{
+  $approvisionnings = $ApprovisionnerHandler->getApprovisionnementPerCity($city);
+}
+
 
 $approvisionning = new Approvisionning($con, $approvisionnings, null);
 ?>
